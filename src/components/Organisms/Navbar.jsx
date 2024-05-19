@@ -3,16 +3,26 @@ import SubHeading from "../Atoms/SubHeading.jsx";
 const Navbar = () => {
   return (
     <div
-      className={"flex items-center justify-between px-[5.62rem]  py-[1.88rem]"}
+      className={
+        "flex items-center justify-between px-6 py-3 md:px-6 md:py-4 lg:px-16 lg:py-4 xl:px-[5.62rem] xl:py-[1.88rem]"
+      }
     >
-      <img src="logo.png" alt="Logo" />
-      <div className={"flex items-center gap-[1.88rem]"}>
-        <SubHeading content={"Home"} style={"text-lg"} />
-        <SubHeading content={"About Us"} style={"text-lg"} />
-        <SubHeading content={"Products"} style={"text-lg"} />
-        <SubHeading content={"Features"} style={"text-lg"} />
-        <SubHeading content={"Reviews"} style={"text-lg"} />
-        <SubHeading content={"Contact Us"} style={"text-lg"} />
+      <img
+        src="logo.png"
+        alt="Logo"
+        className={"w-28 md:w-36 xl:h-auto xl:w-auto "}
+      />
+      <div
+        className={
+          " hidden items-center md:flex md:gap-3 lg:gap-5 xl:gap-[1.88rem]"
+        }
+      >
+        <SubHeading content={"Home"} style={"xl:text-lg lg:text-md"} />
+        <SubHeading content={"About Us"} style={"xl:text-lg lg:text-md"} />
+        <SubHeading content={"Products"} style={"xl:text-lg lg:text-md"} />
+        <SubHeading content={"Features"} style={"xl:text-lg lg:text-md"} />
+        <SubHeading content={"Reviews"} style={"xl:text-lg lg:text-md"} />
+        <SubHeading content={"Contact Us"} style={"xl:text-lg lg:text-md"} />
       </div>
       <div className={"flex items-center gap-[1.25rem]"}>
         <svg
@@ -33,12 +43,31 @@ const Navbar = () => {
           height="22"
           viewBox="0 0 22 22"
           fill="none"
+          className={"hidden md:block"}
         >
           <path
             d="M11.0009 11C12.2975 11 13.541 10.4635 14.4578 9.50842C15.3747 8.55337 15.8898 7.25805 15.8898 5.90741C15.8898 4.55677 15.3747 3.26145 14.4578 2.30641C13.541 1.35136 12.2975 0.814819 11.0009 0.814819C9.70425 0.814819 8.46075 1.35136 7.5439 2.30641C6.62706 3.26145 6.11198 4.55677 6.11198 5.90741C6.11198 7.25805 6.62706 8.55337 7.5439 9.50842C8.46075 10.4635 9.70425 11 11.0009 11ZM9.25538 12.9097C5.49323 12.9097 2.44531 16.0846 2.44531 20.0035C2.44531 20.656 2.9533 21.1852 3.57969 21.1852H18.422C19.0484 21.1852 19.5564 20.656 19.5564 20.0035C19.5564 16.0846 16.5085 12.9097 12.7464 12.9097H9.25538Z"
             fill="#383838"
           />
         </svg>
+        <div
+          className={
+            "block  rounded-full p-1 transition-colors duration-200 active:bg-gray-200 md:hidden"
+          }
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M12 10C11.6044 10 11.2178 10.1173 10.8889 10.3371C10.56 10.5568 10.3036 10.8692 10.1522 11.2346C10.0009 11.6001 9.96126 12.0022 10.0384 12.3902C10.1156 12.7781 10.3061 13.1345 10.5858 13.4142C10.8655 13.6939 11.2219 13.8844 11.6098 13.9616C11.9978 14.0387 12.3999 13.9991 12.7654 13.8478C13.1308 13.6964 13.4432 13.44 13.6629 13.1111C13.8827 12.7822 14 12.3956 14 12C14 11.4696 13.7893 10.9609 13.4142 10.5858C13.0391 10.2107 12.5304 10 12 10ZM5 10C4.60444 10 4.21776 10.1173 3.88886 10.3371C3.55996 10.5568 3.30362 10.8692 3.15224 11.2346C3.00087 11.6001 2.96126 12.0022 3.03843 12.3902C3.1156 12.7781 3.30608 13.1345 3.58579 13.4142C3.86549 13.6939 4.22186 13.8844 4.60982 13.9616C4.99778 14.0387 5.39992 13.9991 5.76537 13.8478C6.13082 13.6964 6.44318 13.44 6.66294 13.1111C6.8827 12.7822 7 12.3956 7 12C7 11.4696 6.78929 10.9609 6.41421 10.5858C6.03914 10.2107 5.53043 10 5 10ZM19 10C18.6044 10 18.2178 10.1173 17.8889 10.3371C17.56 10.5568 17.3036 10.8692 17.1522 11.2346C17.0009 11.6001 16.9613 12.0022 17.0384 12.3902C17.1156 12.7781 17.3061 13.1345 17.5858 13.4142C17.8655 13.6939 18.2219 13.8844 18.6098 13.9616C18.9978 14.0387 19.3999 13.9991 19.7654 13.8478C20.1308 13.6964 20.4432 13.44 20.6629 13.1111C20.8827 12.7822 21 12.3956 21 12C21 11.4696 20.7893 10.9609 20.4142 10.5858C20.0391 10.2107 19.5304 10 19 10Z"
+              fill="black"
+            />
+          </svg>
+        </div>
       </div>
     </div>
   );
