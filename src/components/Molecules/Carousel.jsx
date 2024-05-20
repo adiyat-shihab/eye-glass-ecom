@@ -7,14 +7,13 @@ import Slides from "../Atoms/Slides.jsx";
 
 const Carousel = () => {
   return (
-    <div className={"h-screen w-[99.12vw] bg-[#EAEAEA]"}>
-      {" "}
+    <div className={"h-screen bg-[#EAEAEA]  2xl:w-[99.12vw]"}>
       <Swiper
         direction={"vertical"}
-        autoplay={{
-          delay: 1500,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 1500,
+        //   disableOnInteraction: false,
+        // }}
         pagination={{
           type: "bullets",
           clickable: true,
