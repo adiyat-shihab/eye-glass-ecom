@@ -2,22 +2,26 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "/src/components/Molecules/carousel.css";
-import { Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import Slides from "../Atoms/Slides.jsx";
 
 const Carousel = () => {
   return (
-    <div className={"  h-screen w-[99.12vw] bg-[#EAEAEA]"}>
+    <div className={"h-screen w-[99.12vw] bg-[#EAEAEA]"}>
       {" "}
       <Swiper
         direction={"vertical"}
+        autoplay={{
+          delay: 1500,
+          disableOnInteraction: false,
+        }}
         pagination={{
           type: "bullets",
           clickable: true,
           enabled: true,
           verticalClass: "px-10",
         }}
-        modules={[Pagination]}
+        modules={[Autoplay, Pagination]}
         className="h-full w-full "
       >
         <SwiperSlide>
