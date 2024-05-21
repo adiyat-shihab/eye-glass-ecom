@@ -33,11 +33,11 @@ const Slides = ({ HeadingContent, personImg, imageStyle }) => {
         <img
           src={personImg}
           alt="Person Image"
-          className={` 2xl:w-[63rem]" z-20  mx-auto mt-[7.7rem] md:mt-[2rem] md:h-[30.3rem] lg:mx-0 lg:mt-0 lg:h-[45.59rem] xl:h-[90vh]    2xl:-ml-[10rem] 2xl:h-[54rem] `}
+          className={` z-20 mx-auto mt-[7.7rem] md:mt-[2rem] md:h-[30.3rem] lg:mx-0 lg:mt-0 lg:h-[45.59rem] xl:h-[90vh] 2xl:-ml-[10rem] 2xl:mt-20    2xl:h-[54rem] 2xl:w-[63rem] `}
         />
         <div
           className={
-            " absolute -z-10 rounded-full bg-primary lg:right-[2rem] lg:top-[2rem]  lg:mt-10   lg:h-[40rem] lg:w-[40rem] xl:right-[2rem] xl:top-[2rem] xl:h-[90vh] xl:w-[50rem] 2xl:right-[15rem] 2xl:h-[55rem] 2xl:w-[55rem]"
+            " absolute right-0 top-32 -z-10 h-[25rem] w-[25rem] rounded-full bg-primary md:right-[9rem] md:top-[2rem] md:h-[30rem] md:w-[30rem] lg:right-[2rem] lg:top-[2rem]  lg:mt-10   lg:h-[40rem] lg:w-[40rem] xl:right-[2rem] xl:top-[2rem] xl:h-[90vh] xl:w-[50rem] 2xl:right-[15rem] 2xl:h-[55rem] 2xl:w-[55rem]"
           }
         ></div>
       </div>
